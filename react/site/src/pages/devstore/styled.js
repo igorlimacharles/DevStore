@@ -17,10 +17,10 @@ const Container = styled.div`
     }
 
     .bar-new-student {
-        border: 3px solid #986CDF;
+        border: 3px solid #119FDC;
         border-radius: .5em;
         margin-right: .4em;
-        background-color: #986CDF;
+        background-color: #119FDC;
     }
 
     .text-new-student {
@@ -44,6 +44,30 @@ const Container = styled.div`
         flex-direction: row;
         align-items: center;
     }
+
+    .agp-input-2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .agp-input-2 input {
+        width: 560px;
+    }
+    .agp-textarea {
+        color: #615858;
+        margin-top: .5em;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .agp-textarea textarea {
+        color: #615858;
+        width: 560px;
+        height: 140px;
+        resize: none;
+    }
+
     .input {
         margin-top: .5em;
         margin-bottom: .5em;
@@ -62,7 +86,7 @@ const Container = styled.div`
     }
 
     input {
-        width: 209px;
+        width: 199px;
         height: 36px;
 
         background: #FFFFFF;
@@ -74,6 +98,7 @@ const Container = styled.div`
     }
 
     .name-student {
+        margin: 0.5em;
         font-size: 18px;
         color: #615858;
         width: 5.5em;
@@ -83,6 +108,7 @@ const Container = styled.div`
 
 
     .number-student {
+        margin: 0.5em;
         font-size: 18px;
         color: #615858;
         width: 5.5em;
@@ -90,16 +116,18 @@ const Container = styled.div`
     }
 
     .class-student {
+        margin: 0.5em;
         font-size: 18px;
         color: #615858;
-        margin-right: 0.8em;
+        width: 5.5em;
         font-weight: 800;
     }
 
     .corse-student {
+        margin: 0.5em;
         font-size: 18px;
         color: #615858;
-        margin-right: 1em;
+        width: 5.5em;
         font-weight: 800;
     }
 
@@ -108,18 +136,18 @@ const Container = styled.div`
         align-self: flex-end;
         justify-self: flex-end;
         padding-bottom: 1.5em;
+        margin-right: 3em;
     }
 
-    .button-create  button {
+    .button-create button {
         width: 106px;
         height: 36px;
 
-        background: #E911C6;
+        background-color: #119FDC;
         border-radius: 44px;
         border: none;
         color: white;
         font-size: 14px;
-        margin-left: 2em;
         font-weight: bold;
     }
 
@@ -221,7 +249,7 @@ const Container = styled.div`
     }
 
     thead {
-        background-color: #986CDF;
+        background-color: #6CC3DF;
     }
 
     table {
@@ -276,7 +304,7 @@ const Container = styled.div`
 
     .absolute {
         color: white;
-        background-color: #DB21BD;
+        background-color: #119FDC;
         border: 3px solid white;
         border-radius: 50%;
         position: absolute;

@@ -26,23 +26,49 @@ export default function Index() {
                                     <div class="input"> <input /> </div>  
                                 </div> 
                                 <div class="agp-input">
-                                    <div class="number-student"> Chamada: </div>  
+                                    <div class="number-student"> Categoria: </div>  
+                                    <div class="input"> <input /> </div> 
+                                </div>
+
+                                <div class="agp-input">
+                                    <div class="number-student"> Avaliação: </div>  
                                     <div class="input"> <input /> </div> 
                                 </div>
                             </div>
 
                             <div class="input-right">
                                 <div class="agp-input">
-                                    <div class="corse-student"> Curso: </div>  
+                                    <div class="corse-student"> Preço De: </div>  
                                     <div class="input"> <input /> </div>  
                                 </div>
                                 <div class="agp-input">
-                                    <div class="class-student"> Turma: </div>  
+                                    <div class="class-student"> Preço POR: </div>  
                                     <div class="input"> <input /> </div> 
                                 </div>
+
+                                <div class="agp-input">
+                                    <div class="class-student"> Estoque: </div>  
+                                    <div class="input"> <input /> </div> 
+                                </div>
+
                             </div>
-                            <div class="button-create"> <button> Cadastrar </button> </div>
+
                         </div>
+
+                        <div class="input-new-student-2">
+                        <div class="agp-input-2">
+                                    <div class="number-student"> Link Imagem: </div>  
+                                    <div class="input"> <input /> </div> 
+                                </div>
+
+                                <div class="agp-textarea">
+                                    <div class="number-student"> Descrição: </div>  
+                                    <div class="input"> <textarea></textarea> </div> 
+                                </div>
+                            
+                        </div>
+                        <div class="button-create"> <button> Cadastrar </button> </div>
+
                     </div>
 
                     <div class="student-registered-box">
@@ -54,11 +80,12 @@ export default function Index() {
                         <table class ="table-user">
                             <thead>
                                 <tr>
+                                    <th> </th>
                                     <th> ID </th>
-                                    <th> Nome </th>
-                                    <th> Chamada </th>
-                                    <th> Turma </th>
-                                    <th> Curso </th>
+                                    <th> Produto </th>
+                                    <th> Categoria </th>
+                                    <th> Preço </th>
+                                    <th> Estoque </th>
                                     <th class="coluna-acao"> </th>
                                     <th class="coluna-acao"> </th>
                                 </tr>
@@ -66,43 +93,45 @@ export default function Index() {
                     
                             <tbody>
                                 <tr>
+                                    <td></td>
                                     <td> 1 </td>
-                                    <td> Fulao da Silva Sauro</td>
-                                    <td> 15 </td>
-                                    <td> InfoX </td>
-                                    <td> Informática </td>
+                                    <td> Esfera do Dragão</td>
+                                    <td> Acessórios </td>
+                                    <td> 15,99 </td>
+                                    <td> 14 </td>
                                     <td> <button> <img src="/assets/images/edit.svg" alt="" /> </button> </td>
                                     <td> <button> <img src="/assets/images/trash.svg" alt="" /> </button> </td>
                                 </tr>
                             
                                 <tr class="linha-alternada">
+                                    <td></td>
                                     <td> 1 </td>
-                                    <td> Fulao da Silva Sauro</td>
-                                    <td> 16 </td>
-                                    <td> InfoX </td>
-                                    <td> Informática </td>
+                                    <td> Esfera do Dragão</td>
+                                    <td> Acessórios </td>
+                                    <td> 15,99 </td>
+                                    <td> 14 </td>
                                     <td> </td>
                                     <td> </td>
                                 </tr>
 
                                 <tr>
+                                    <td></td>
                                     <td> 1 </td>
-                                    <td> Fulao da Silva Sauro</td>
-                                    <td> 17 </td>
-                                    <td> InfoX </td>
-                                    <td> Informática </td>
-                                    <td> </td>
-                                    <td> </td>
+                                    <td> Esfera do Dragão</td>
+                                    <td> Acessórios </td>
+                                    <td> 15,99 </td>
+                                    <td> 14 </td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
 
                                 <tr class="linha-alternada">
+                                    <td></td>
                                     <td> 1 </td>
-                                    <td> Fulao da Silva Sauro</td>
-                                    <td> 18 </td>
-                                    <td> InfoX </td>
-                                    <td> Informática </td>
-                                    <td> </td>
-                                    <td> </td>
+                                    <td> Esfera do Dragão</td>
+                                    <td> Acessórios </td>
+                                    <td> 15,99 </td>
+                                    <td> 14 </td>
                                 </tr>
                                 
                             </tbody> 
