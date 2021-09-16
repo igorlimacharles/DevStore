@@ -49,21 +49,21 @@ export default function Index () {
     async function inserir () {
         loading.current.continuousStart();
         if(nome === ('') || nome === nComparar)
-        return toast.error('Nome inválido');
+            toast.dark('Nome inválido');
     if (categoria === (''))
-        return toast.error('Categoria Inválida');
+        toast.dark('Categoria Inválida');
     if (avaliacao === (isNaN) || avaliacao ===('') || avaliacao < 0)
-        return toast.error('Avaliacao inválida');
+         toast.dark('Avaliacao inválida');
     if (precoDe === ('') || precoDe === (isNaN) || precoDe < 0) 
-        return toast.error('Preço de Inválido');
+         toast.dark('Preço de Inválido');
     if (precoPor === ('') || precoPor === (isNaN) || precoPor < 0)
-        return toast.error('Preço por inválido');
+         toast.dark('Preço por inválido');
     if (estoque === ('') || estoque === (isNaN) || estoque < 0)
-        return toast.error('Estoque invalido');  
+         toast.dark('Estoque invalido');  
     if (imagem === (''))
-        return toast.error('Imagem Inválida');
+         toast.dark('Imagem Inválida');
     if (descricao === (''))
-        return toast.error('Descrição Inválida')
+         toast.dark('Descrição Inválida')
         setNComparar('')
         if(idAlterando === 0){
             let r = await api.inserir(nome, categoria, precoDe, precoPor, avaliacao, descricao, estoque, imagem);
