@@ -21,6 +21,7 @@ const api = new Api();
 export default function Index () {
     const [produto, setProduto] = useState([]);
     const [nome, setNome] = useState('');
+    const [nComparar, setNComparar] = useState('');
     const [categoria, setCategoria] = useState('');
     const [avaliacao, setAvaliacao] = useState('');
     const [precoDe, setPrecoDe] = useState('');
@@ -47,26 +48,41 @@ export default function Index () {
 
     async function inserir () {
         loading.current.continuousStart();
-        if(nome !== ('') && categoria !== ('') && avaliacao !== (isNaN) && avaliacao !==('') 
-           && precoDe !== (isNaN) && precoPor !== ('') && precoPor !== (isNaN) 
-           && estoque !== ('') && estoque !== (isNaN) && imagem !== ('') && descricao !== ('')){
-            if(idAlterando === 0){
-                let r = await api.inserir(nome, categoria, precoDe, precoPor, avaliacao, descricao, estoque, imagem);
-                if(r.erro)
-                    toast.dark(r.erro)
-                else
-                    toast.dark('Produto inserido!')
-            } else {
-                let r = await api.alterar(nome, categoria, precoDe, precoPor, avaliacao, descricao, estoque, imagem);
-                if (r.erro)
+        if(nome === ('') || nome === nComparar)
+        return toast.error('Nome inválido');
+    if (categoria === (''))
+        return toast.error('Categoria Inválida');
+    if (avaliacao === (isNaN) || avaliacao ===('') || avaliacao < 0)
+        return toast.error('Avaliacao inválida');
+    if (precoDe === ('') || precoDe === (isNaN) || precoDe < 0) 
+        return toast.error('Preço de Inválido');
+    if (precoPor === ('') || precoPor === (isNaN) || precoPor < 0)
+        return toast.error('Preço por inválido');
+    if (estoque === ('') || estoque === (isNaN) || estoque < 0)
+        return toast.error('Estoque invalido');  
+    if (imagem === (''))
+        return toast.error('Imagem Inválida');
+    if (descricao === (''))
+        return toast.error('Descrição Inválida')
+        setNComparar('')
+        if(idAlterando === 0){
+            let r = await api.inserir(nome, categoria, precoDe, precoPor, avaliacao, descricao, estoque, imagem);
+            if(r.erro)
                 toast.dark(r.erro)
-                else
-                    toast.dark('Produto alterado!')
+            else {
+                toast.dark('Produto inserido!')
+                limparCampos();
             }
-            limparCampos();
-        } else (
-                toast.dark('Campos inválidos')
-        )
+            
+        } else {
+            let r = await api.alterar( idAlterando, nome, categoria, precoDe, precoPor, avaliacao, descricao, estoque, imagem);
+            if (r.erro)
+            toast.dark(r.erro)
+            else
+                toast.dark('Produto alterado!')
+                limparCampos();
+                listar();
+        }
         listar();
         loading.current.complete()
     }
