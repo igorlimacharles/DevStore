@@ -42,7 +42,7 @@ app.post('/produto', async (req, resp) => {
 
 app.put('/produto/:id', async (req, resp) => {
         try {
-            let { nome, categoria, precoDe, precoPor, avaliacao, descricao, estoque, imagem, ativo} = req.body;
+            let { nome, categoria, precoDe, precoPor, avaliacao, descricao, estoque, imagem} = req.body;
             let {id} = req.params;
             let r = await db.tb_produto.update(
                 {
@@ -55,7 +55,6 @@ app.put('/produto/:id', async (req, resp) => {
                     qtd_estoque: estoque,
                     img_produto: imagem,
                     bt_ativo: ativo,
-                    dt_inclusao: new Date()
                 },
                 {
                     where: { id_produto: id }

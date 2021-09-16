@@ -17,11 +17,9 @@ import LoadingBar from 'react-top-loading-bar'
 import Api from '../service/api.js'
 const api = new Api();
 
-
 export default function Index () {
     const [produto, setProduto] = useState([]);
     const [nome, setNome] = useState('');
-    const [nComparar, setNComparar] = useState('');
     const [categoria, setCategoria] = useState('');
     const [avaliacao, setAvaliacao] = useState('');
     const [precoDe, setPrecoDe] = useState('');
@@ -46,9 +44,9 @@ export default function Index () {
     },
      [])
 
-    async function inserir () {
+     async function inserir () {
         loading.current.continuousStart();
-        if(nome === ('') || nome === nComparar)
+        if(nome === (''))
             toast.dark('Nome inválido');
     if (categoria === (''))
         toast.dark('Categoria Inválida');
@@ -64,7 +62,6 @@ export default function Index () {
          toast.dark('Imagem Inválida');
     if (descricao === (''))
          toast.dark('Descrição Inválida')
-        setNComparar('')
         if(idAlterando === 0){
             let r = await api.inserir(nome, categoria, precoDe, precoPor, avaliacao, descricao, estoque, imagem);
             if(r.erro)
