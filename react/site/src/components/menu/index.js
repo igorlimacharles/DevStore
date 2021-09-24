@@ -7,7 +7,7 @@ export default function Index() {
         <Container>
             <header className="header-left-box">
                 <div className="svg-cabecalho-left-box"> <img src="/assets/images/Lobinho.svg" alt="" /></div>
-                <div className="devSchool"> <span>Dev</span>School</div>
+                <div className="devSchool"> <span>Dev</span>Store</div>
             </header>
             <div className="black-box"></div>
             <div className="left-box-management">
